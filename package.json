@@ -21,5 +21,7 @@
   },
   "homepage": "https://github.com/whynft/nft-gift-button-contract#readme",
   "dependencies": {
+    "@truffle/hdwallet-provider": "^2.0.1",
+    "dotenv": "^14.3.2"
   }
 }
