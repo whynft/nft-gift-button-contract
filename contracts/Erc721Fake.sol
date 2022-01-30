@@ -41,7 +41,7 @@ contract ERC721Fake {
         nftToOwner[_tokenId] = _to;
     }
 
-    function approve(address _approved, uint256 _tokenId) external payable onlyOwnerOf(_tokenId) {
+    function approve(address _approved, uint256 _tokenId) public onlyOwnerOf(_tokenId) {
         nftApprovals[_tokenId] = _approved;
 //        todo: emit event that has is in erc721? (currently no event feature use)
     }
