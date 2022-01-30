@@ -16,7 +16,7 @@ docker build -t nft-gift-contract -f Dockerfile .
 ```bash
 docker run --rm -v $(pwd):/opt -it --entrypoint bash nft-gift-contract
 ```
-Now you are ready to develop project and use truffle, npm.
+Now you are ready to develop project and use truffle (compile, test, deploy), npm.
 
 # Truffle
 Truffle helps you to test and migrate with 1 command to declared networks 
@@ -36,4 +36,9 @@ To deploy contract on rinkeby
 > for deploy params (i.e. construct params check [migrations/2_darilka.js](migrations/2_darilka.js))
 ```bash
 truffle migrate --network rinkeby
+```
+
+To test on local truffle chain
+```bash
+truffle test
 ```
