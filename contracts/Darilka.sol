@@ -79,7 +79,7 @@ contract Darilka {
         return amountForReceiver;
     }
 
-    function withdraw() public payable isOwner {
+    function withdraw() external payable isOwner {
         payable(owner).transfer(address(this).balance);
     }
 
