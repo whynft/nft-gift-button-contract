@@ -26,7 +26,7 @@ contract("Darilka", (accounts) => {
 
     context("Primitive checks", async () => {
         it("Should commission be equal as set", async () => {
-            const commission = await contractInstance.getComission();
+            const commission = await contractInstance.commission();
             assert.equal(commission, defaultCommission);
         })
 
