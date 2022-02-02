@@ -1,7 +1,8 @@
 # nft-gift-button-contract
+I.e. **Darilka** contract for the [proposal](https://gov.rarible.org/t/nft-gift-button-grant-proposal/263).
 
 # Develop
-The repo prepared for continues contarct development with truffle.
+The repo prepared for continues contarct development with truffle in Docker. We use Github Actions to test code on PR (i.e. CI) as well.
 
 ## Docker
 In repo I present Dockerfile with truffle instiled, in order to compile, 
@@ -24,10 +25,10 @@ Truffle helps you to test and migrate with 1 command to declared networks
 > for declared networks check [truffle-config.js](truffle-config.js)
 
 ## Env
-Prepare `.env` file as it in [.env.example](.env.example).
+Prepare `.env` file as it in [.env.example](.env.example). This env will be loaded with dotenv in [truffle-config.js](truffle-config.js).
 
 ## Commands
-To compile json files from contracts to build](build) directory
+To compile json files from contracts to [build](build) directory
 ```bash
 truffle compile
 ```
