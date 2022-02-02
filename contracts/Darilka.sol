@@ -18,9 +18,9 @@ interface Transferable {
  */
 contract Darilka {
 
-    address private owner;
-    uint256 private commission;
-    uint256 private amountForReceiver;
+    address public owner;
+    uint256 public commission;
+    uint256 public amountForReceiver;
 
  // modifier to check if caller is owner
     modifier isOwner() {
@@ -39,7 +39,6 @@ contract Darilka {
     }
 
     mapping(bytes32 => bytes32) private confirmationHashes;
-
     mapping(bytes32 => address) private bookedTransfer;
 
     /**
@@ -65,18 +64,6 @@ contract Darilka {
 
     function setAmountForReceiver(uint256 newAmountForReceiver) public isOwner {
         amountForReceiver = newAmountForReceiver;
-    }
-
-    function getOwner() public view returns (address) {
-        return owner;
-    }
-
-    function getComission() public view returns (uint256) {
-        return commission;
-    }
-
-    function getAmountForReceiver() public view returns (uint256) {
-        return amountForReceiver;
     }
 
     function withdraw() external payable isOwner {
