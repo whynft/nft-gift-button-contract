@@ -94,5 +94,7 @@ contract Darilka {
         require(bookedTransfer[nft] == msg.sender);
         require(confirmationHashes[nft] == keccak256(abi.encodePacked(confirmation)));
         Erc721Interface(nftContract).safeTransferFrom(sender, receiver, tokenId);
+        delete confirmationHashes[nft];
+        delete bookedTransfer[nft];
     }
 }
